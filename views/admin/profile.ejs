@@ -12,14 +12,14 @@
   <header>
     <nav>
       <ul>
-        <li> <a href="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/bookingDetails">View Booking Details</a></li>
+        <li> <a href="/admin/<%= admin._id %>/bookingDetails">View Booking Details</a></li>
 
-        <li> <a href="https://museum-chatbot-ticketing.onrender.com/events/eventManage">Manage Events</a> </li>
-       <li> <a href="https://museum-chatbot-ticketing.onrender.com/events/createEvent">Create Events</a> </li>
+        <li> <a href="/events/eventManage">Manage Events</a> </li>
+       <li> <a href="/events/createEvent">Create Events</a> </li>
 
         <!-- <li><div class="profile-icon" onclick="toggleProfileBox()"><i class="fas fa-user"></i></div></li> -->
        
-        <li><a href="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/profile">Profile</a></li>
+        <li><a href="/admin/<%= admin._id %>/profile">Profile</a></li>
         <li><a href="/">Home</a></li>
         <li><a href="/logout" class="logout-button">Logout</a></li>
       </ul>
@@ -31,7 +31,7 @@
       
       <div class="profile-details">
         <h2><%= admin.name || 'No Name Provided' %></h2>
-        <form action="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/profile" method="POST"  id="profileForm">
+        <form action="/admin/<%= admin._id %>/profile" method="POST"  id="profileForm">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" value="<%= admin.name || '' %>" readonly required>
           
@@ -80,7 +80,7 @@
         credentials: 'include', // Ensures cookies are sent with the request
     }).then(() => {
         // Redirect to home page
-        window.location.href = 'https://museum-chatbot-ticketing.onrender.com/';
+        window.location.href = '/';
     });
 });
 
