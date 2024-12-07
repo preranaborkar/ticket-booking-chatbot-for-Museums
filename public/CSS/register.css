@@ -1,0 +1,185 @@
+/* General reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background styling */
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/uploads/museum.jpg') no-repeat center center/cover; /* Replace with your background image */
+  }
+  
+  /* Container styling */
+  .container {
+    height:600px; /* Adjust container height automatically */
+  width: 100%;
+  max-width: 400px; /* Smaller form size */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8); /* Light black with transparency */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 1.5s ease-in-out;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Hover effect transitions */
+}
+
+/* Hover effect */
+.container:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    border-color: white; /* Change border color on hover */
+    box-shadow: 0 0 8px white; /* White box-shadow effect */
+  }
+  /* Form title */
+  .title {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    word-wrap: break-word;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* Padding */
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border */
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+   .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: border-bottom 0.3s ease;
+  }
+  .form-group input:focus,
+.form-group input:valid {
+  border-color: white; /* Change border to white */
+
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
+.login-link-container, p{
+    color: white;
+    
+}
+.login-link-container, a{
+    color: skyblue;
+    
+}
+
+
+  .form-group input:focus {
+    border-bottom: 2px solid white;
+    outline: none;
+  }
+  
+  /* Register button styling */
+  .register-button {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .register-button:hover {
+    background: black;
+    color: white;
+  }
+  
+  /* Link styling */
+  .login-link-container {
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .login-link {
+    color: #00aaff;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  /* Animation for form */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design for small screens */
+  @media (max-width: 600px) {
+    .container {
+      max-width: 320px; /* Further reduce size on small devices */
+      padding: 15px;
+      height: auto;
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .form-group input {
+      font-size: 14px;
+    }
+  
+    .register-button {
+      font-size: 14px;
+    }
+  
+    /* Adjust the link size for mobile */
+    .login-link-container {
+      font-size: 14px;
+    }
+  }

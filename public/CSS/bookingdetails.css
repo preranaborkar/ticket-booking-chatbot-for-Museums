@@ -1,0 +1,123 @@
+/* bookingDetails.css */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+
+  header {
+      background-color: #2d2d2d;
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    nav {
+      display: flex;
+      justify-content: flex-end;  /* Align nav items to the right */
+      align-items: center;
+      padding: 0 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 1.1rem;
+      transition: color 0.3s;
+    }
+    
+    nav ul li a:hover {
+      color: #f5a623;
+      text-decoration: underline;
+    }
+    
+    
+    /* Logout Button Styling */
+    nav .logout-button {
+      background-color: #d87d15; /* Dark color for logout button */
+      color: white;
+      font-weight: bold;
+      padding: 5px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    
+    nav .logout-button:hover {
+     
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add subtle shadow on hover */
+    }
+.booking-details-container {
+  margin: 20px;
+}
+
+
+.booking-details-container h1{
+  text-align: left;
+  font-size: 2rem;
+  color: #f5a623;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table th {
+  background-color: #e0ae63;
+}
+
+/* Footer Styling */
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+footer ul li a:hover {
+  color: #f5a623;
+  text-decoration: underline;
+}
+
+

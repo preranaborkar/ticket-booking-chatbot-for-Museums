@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking Details</title>
+  <link rel="stylesheet" href="/CSS/bookingdetails.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        
+        <li><a href="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/profile">Profile</a></li>
+        <li><a href="https://museum-chatbot-ticketing.onrender.com/">Home</a></li>
+        <li><a href="https://museum-chatbot-ticketing.onrender.com/logout" class="logout-button">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="booking-details-container">
+    <h1>Booking Details</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Email</th>
+          <th>Event Name</th>
+          <th>Booking Date</th>
+          <th>Quantity</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% bookings.forEach(booking => { %>
+          <tr>
+            <td><%= booking.userName %></td>
+            <td><%= booking.email %></td>
+            <td><%= booking.eventName %></td>
+            <td><%= new Date(booking.bookingDate).toDateString() %></td>
+            <td><%= booking.quantity %></td>
+            <td><%= booking.status %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+  </footer>
+</body>
+</html>

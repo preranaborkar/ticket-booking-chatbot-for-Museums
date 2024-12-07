@@ -1,0 +1,201 @@
+/* General Body Styling */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #2d2d2d;
+}
+
+/* Header styling */
+header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 15px 20px; 
+  background-color: #2d2d2d; 
+  color: white; 
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Title styling */
+header h1 {
+  font-size: 1.5rem;
+  margin: 0; 
+  color: orange; 
+}
+
+/* Create Event Button Styling */
+header .create-event-btn {
+  display: inline-block;
+  background-color: #f5a623;
+  color: white; 
+  font-size: 1rem; 
+  font-weight: bold; 
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 5px; 
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+}
+
+/* Hover effect for button */
+header .create-event-btn:hover {
+  background-color: #d87d15; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
+}
+
+/* Table Styling */
+#eventTable {
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-x: auto; 
+}
+
+#eventTable th,
+#eventTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+#eventTable th {
+  background-color: #e0ae63;
+  color: white;
+  font-size: 1rem;
+}
+
+#eventTable td {
+  font-size: 1rem;
+}
+
+#eventTable img {
+  width: 50px;
+  height: auto;
+  border-radius: 5px;
+}
+
+#eventTable form button,
+#eventTable a.update-btn {
+  padding: 8px 15px;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#eventTable form button {
+  background-color: #d87d15;
+  color: white;
+  border: none;
+  width:88px;
+  transition: background-color 0.3s;
+}
+
+#eventTable form button:hover {
+  background-color: #f5a623;
+}
+
+#eventTable a.update-btn {
+  background-color: #f5a623;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+#eventTable a.update-btn:hover {
+  background-color: #d87d15;
+}
+
+
+/* Add container for table responsiveness */
+.container {
+  padding: 0 15px;
+}
+
+
+
+/* Footer Styling */
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+footer ul li a:hover {
+  color: #f5a623;
+ 
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Header */
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.2rem;
+  }
+
+  header .create-event-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  /* Table */
+  #eventTable {
+    font-size: 0.9rem;
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+  }
+
+  #eventTable th, #eventTable td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  #eventTable form button,
+  #eventTable a.update-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+
+  /* Footer */
+  footer ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer ul li a {
+    font-size: 0.9rem;
+  }
+}

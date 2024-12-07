@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Management</title>
+  <link rel="stylesheet" href="/CSS/eventManage.css">
+</head>
+<body>
+  
+
+  
+  
+    
+    <header>
+      <h1>Event Management</h1>
+      <a href="https://museum-chatbot-ticketing.onrender.com/events/createEvent" class="create-event-btn">&#x2795; Create Event</a>
+    </header>
+    <div class="container">
+    <table id="eventTable">
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Event Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Capacity</th>
+          <th>Price</th>
+          <th>Duration</th>
+         
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+     
+      <tbody>
+        <% events.forEach((event, index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= event.eventName %></td>
+          <td><%= event.eventDate.toLocaleDateString() %></td>
+          <td><%= event.eventTime %></td>
+          <td><%= event.capacity %></td>
+          <td>$<%= event.eventPrice %></td>
+          <td><%= event.duration %></td>
+
+<td><%= event.eventDescription %></td>
+<td>
+  <form action="/events/delete/<%= event._id %>" method="POST">
+    <button type="submit">Delete</button>
+  </form><br>
+  <a href="/events/update/<%= event._id %>" class="update-btn">Update</a>
+</td>
+        </tr>
+        <% }) %>
+      </tbody>
+      
+      
+    </table>
+  </div>
+
+  
+  <footer>
+    
+  <footer>
+    <ul>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+  </footer>
+  </footer>
+
+  <!-- <script src="/backend/public/eventManage.js"></script> -->
+</body>
+</html>

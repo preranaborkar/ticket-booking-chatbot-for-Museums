@@ -1,0 +1,164 @@
+/* General reset for consistent styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Background styling */
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/uploads/museum.jpg') no-repeat center center/cover;
+  }
+  
+  /* Login page container */
+  .login-page {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8); /* Light black with transparency */
+    border-radius: 8px;
+    border: 2px solid black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s, border-color 0.3s; /* Apply fade-in animation */
+  }
+  
+  .login-page:hover {
+    transform: scale(1.03); /* Slight zoom effect */
+    border-color:white; 
+    box-shadow: 0 0 8px white;/* Change border color on hover */
+  }
+  
+  /* Animation keyframes */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Slide in slightly from the top */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form title */
+  .login-form h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  .form-group label {
+    display: none;
+    
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px 10px 10px 10px; /* Padding */
+    border: none;
+    border-bottom: 2px solid #ccc; /* Bottom border */
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  .form-group input:focus,
+  .form-group input:valid {
+    border-color: white; /* Change border to white */
+   /* Light white transparent background */
+    box-shadow: 0 0 8px white; /* Glow effect */
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05);
+  }
+  
+  .form-group input:focus {
+    box-shadow: 0 1px 5px white;
+  }
+  
+  .form-group .icon {
+    position: absolute;
+    top: 50%;
+    padding: 10px 40px 10px 10px;
+    right: 10px;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 18px;
+    pointer-events: none;
+  }
+  ::placeholder {
+    color: #bbb;
+  }
+  
+  /* Button styling */
+  
+  .register-link ,p {
+    color:skyblue;
+  }
+  
+  register-link,a{
+    color: skyblue;
+    
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s box-shadow 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background: black;
+    box-shadow: 0 0 10px white;
+    color: white;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .login-page {
+      padding: 15px;
+    }
+  
+    .login-form h2 {
+      font-size: 18px;
+    }
+  }
+  
+  /* Link styling */
+  .login-form a {
+    color: #e3e7e9;
+    text-decoration: none;
+  }
+  
+  .login-form a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+  }

@@ -1,0 +1,175 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2d2d2d;
+  background-color: #f7f7f7;
+}
+
+header {
+  background-color: #2d2d2d;
+  padding: 15px 0;
+  position: sticky; 
+  top: 0; 
+  z-index: 1000;
+
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content:  flex-end; ;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f5a623;
+  
+}
+
+
+
+      /* Logout Button Styling */
+      nav .logout-button {
+        background-color: #d87d15; /* Dark color for logout button */
+        color: white;
+        font-weight: bold;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+      
+      nav .logout-button:hover {
+       
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Add subtle shadow on hover */
+      }
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px 5px;
+}
+
+.profile {
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  
+  width: 70%;
+  max-width: 800px;
+}
+
+.profile h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #f5a623;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid  #ccc;
+  border-radius: 5px;
+}
+.profile-details input:focus,
+.profile-details textarea:focus {
+  border-color: #f5a623;
+  outline: none;
+  box-shadow: 0 0 5px rgba(245, 166, 35, 0.3);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content:flex-end;
+ 
+}
+
+.btn {
+  background-color: #f5a623;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+ 
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+  
+  font-size: 1rem;
+}
+.btn:hover {
+  background-color: #f5a623;
+}
+
+footer {
+  background-color: #2d2d2d;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+
+footer ul li a:hover {
+  color: #f5a623;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile {
+    width: 95%;
+  }
+
+  input, textarea {
+    font-size: 1rem;
+  
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}

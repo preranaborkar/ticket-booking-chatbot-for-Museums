@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Profile</title>
+  <link rel="stylesheet" href="/CSS/profile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li> <a href="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/bookingDetails">View Booking Details</a></li>
+
+        <li> <a href="https://museum-chatbot-ticketing.onrender.com/events/eventManage">Manage Events</a> </li>
+       <li> <a href="https://museum-chatbot-ticketing.onrender.com/events/createEvent">Create Events</a> </li>
+
+        <!-- <li><div class="profile-icon" onclick="toggleProfileBox()"><i class="fas fa-user"></i></div></li> -->
+       
+        <li><a href="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/profile">Profile</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/logout" class="logout-button">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="profile-container">
+    <div class="profile">
+      
+      <div class="profile-details">
+        <h2><%= admin.name || 'No Name Provided' %></h2>
+        <form action="https://museum-chatbot-ticketing.onrender.com/admin/<%= admin._id %>/profile" method="POST"  id="profileForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" value="<%= admin.name || '' %>" readonly required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" value="<%= admin.email || '' %>" readonly required>
+          
+          <label for="phone_number">Contact:</label>
+          <input type="text" id="phone_number" name="phone_number" value="<%= admin.phone_number || '' %>" readonly>
+          
+          <label for="about_me">About Me:</label>
+          <textarea id="about_me" name="about_me" readonly><%= admin.about_me || 'Tell us about yourself' %></textarea>
+        
+          <label for="address">Address:</label>
+          <textarea id="address" name="address" readonly><%= admin.address || '' %></textarea>
+          
+          <div class="buttons">
+            <button type="button" id="editButton" class="btn" onclick="makeEditable()">Edit</button>
+            <button type="submit" id="saveButton" class="btn" style="display: none;">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <ul>
+      <li><a href="/about">About Us</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="/privacy">Privacy Policy</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    function makeEditable() {
+    const form = document.getElementById('profileForm');
+    const inputs = form.querySelectorAll('input, textarea');
+    inputs.forEach(input => input.removeAttribute('readonly'));
+    
+    document.getElementById('editButton').style.display = 'none';
+    document.getElementById('saveButton').style.display = 'block';
+  }
+  document.querySelector('.logout-button').addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    fetch('/logout', {
+        method: 'GET',
+        credentials: 'include', // Ensures cookies are sent with the request
+    }).then(() => {
+        // Redirect to home page
+        window.location.href = 'https://museum-chatbot-ticketing.onrender.com/';
+    });
+});
+
+  </script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
