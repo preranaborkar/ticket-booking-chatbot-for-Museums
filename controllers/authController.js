@@ -67,6 +67,8 @@ const loginUser = async (req, res) => {
   
 };
 
+console.log("test")
+
 module.exports = {
   registerUser,
   loginUser
